@@ -33,7 +33,11 @@ class SigStr(QObject):
 
     def send(self, text):
         self.sigStr.emit(text)
-
+        
+# Get absolute path to resource, works for dev and for PyInstaller
+def resource_path(relative_path):
+    base_path = getattr(sys, '_MEIPASS', os.path.dirname(os.path.abspath(__file__)))
+    return os.path.join(base_path, relative_path)
 
 class mywindow(QMainWindow, Ui_Client):
     def __init__(self):
@@ -42,7 +46,7 @@ class mywindow(QMainWindow, Ui_Client):
         self.setupUi(self)
         self.endChar = '\n'
         self.intervalChar = '#'
-        file = open('IP.txt', 'r')
+        file = open(resource_path("IP.txt"), 'r')
         self.IP.setText(str(file.readline()))
         file.close()
         self.h = self.IP.text()
@@ -714,7 +718,7 @@ class mywindow(QMainWindow, Ui_Client):
         if self.Btn_Connect.text() == "Connect":
             self.h = self.IP.text()
             self.TCP.StartTcpClient(self.h, )
-            file = open('IP.txt', 'w')
+            file = open(resource_path("IP.txt"), 'w')
             file.write(self.IP.text())
             file.close()
             try:
