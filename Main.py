@@ -57,7 +57,7 @@ class mywindow(QMainWindow, Ui_Client):
         self.img.load("*.jpg")
         self.img.save("*.jpg")
         self.setWindowIcon(QIcon('image/logo_Mini.png'))
-        self.label_Video.setPixmap(QPixmap('image/Raspberry_4WD_M_Car.png'))
+        self.label_Video.setPixmap(QPixmap('image/Raspberry_4WD_Car.png'))
         self.W_flag = 0
         self.m_DragPosition = self.pos()
         self.setWindowFlags(Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint)
@@ -71,7 +71,7 @@ class mywindow(QMainWindow, Ui_Client):
         self.Key_Z = False
         self.Key_X = False
         self.Key_Space = False
-        self.Wheel_Flag = 1
+        self.Wheel_Flag = 0
         self.Rotate_Flag = 1
         self.setFocusPolicy(Qt.StrongFocus)
         self.progress_Power.setMinimum(0)
@@ -167,18 +167,6 @@ class mywindow(QMainWindow, Ui_Client):
         self.Btn_Move_Right.pressed.connect(self.on_btn_Moveright)
         self.Btn_Move_Right.released.connect(self.on_btn_Stop)
 
-        self.Btn_DiaLeft.pressed.connect(self.on_btn_Dialeft)
-        self.Btn_DiaLeft.released.connect(self.on_btn_Stop)
-
-        self.Btn_DiaRight.pressed.connect(self.on_btn_Diaright)
-        self.Btn_DiaRight.released.connect(self.on_btn_Stop)
-
-        self.Btn_DiaDLeft.pressed.connect(self.on_btn_Diad_left)
-        self.Btn_DiaDLeft.released.connect(self.on_btn_Stop)
-
-        self.Btn_DiaDRight.pressed.connect(self.on_btn_Diad_right)
-        self.Btn_DiaDRight.released.connect(self.on_btn_Stop)
-
         self.Btn_Video.clicked.connect(self.on_btn_video)
 
         self.Btn_Up.clicked.connect(self.on_btn_Up)
@@ -187,7 +175,6 @@ class mywindow(QMainWindow, Ui_Client):
         self.Btn_Home.clicked.connect(self.on_btn_Home)
         self.Btn_Right.clicked.connect(self.on_btn_Right)
         self.Btn_Tracking_Faces.clicked.connect(self.Tracking_Face)
-        self.Btn_wheel.clicked.connect(self.on_btn_wheelchange)
         self.Btn_Rotate.clicked.connect(self.on_btn_rotate)
         self.Btn_Buzzer.pressed.connect(self.on_btn_Buzzer)
         self.Btn_Buzzer.released.connect(self.on_btn_Buzzer)
@@ -526,40 +513,12 @@ class mywindow(QMainWindow, Ui_Client):
                 -135) + self.intervalChar + str(1500) + self.endChar
             self.TCP.sendData(cmd.CMD_CAR_ROTATE + R_Diadright)
 
-    def on_btn_wheelchange(self):
-        if self.Wheel_Flag:
-            self.Btn_Move_Left.hide()
-            self.Btn_Move_Right.hide()
-            self.Btn_DiaLeft.hide()
-            self.Btn_DiaRight.hide()
-            self.Btn_DiaDLeft.hide()
-            self.Btn_DiaDRight.hide()
-            self.Btn_Rotate.hide()
-            self.Btn_Turn_Left.move(80, 520)
-            self.Btn_Turn_Right.move(300, 520)
-            self.Btn_wheel.setText("Ordinaly_wheels")
-            self.label_Video.setPixmap(QPixmap('image/Raspberry_4WD_Car.png'))
-            self.Wheel_Flag = 0
-        else:
-            self.Btn_Move_Left.show()
-            self.Btn_Move_Right.show()
-            self.Btn_DiaLeft.show()
-            self.Btn_DiaRight.show()
-            self.Btn_DiaDLeft.show()
-            self.Btn_DiaDRight.show()
-            self.Btn_Rotate.show()
-            self.Btn_Turn_Left.move(0, 520)
-            self.Btn_Turn_Right.move(380, 520)
-            self.Btn_wheel.setText("Mecanum_wheels")
-            self.label_Video.setPixmap(QPixmap('image/Raspberry_4WD_M_Car.png'))
-            self.Wheel_Flag = 1
-
     def on_btn_rotate(self):
         if self.Rotate_Flag:
-            self.Btn_Rotate.setText("Rotate-Off")
+            self.Btn_Rotate.setText("Вращение-Выкл")
             self.Rotate_Flag = 0
         else:
-            self.Btn_Rotate.setText("Rotate-On")
+            self.Btn_Rotate.setText("Вращение-Вкл")
             self.Rotate_Flag = 1
 
     def on_btn_video(self):
@@ -601,26 +560,26 @@ class mywindow(QMainWindow, Ui_Client):
         self.VSlider_Servo2.setValue(self.servo2)
 
     def on_btn_Buzzer(self):
-        if self.Btn_Buzzer.text() == 'Buzzer':
+        if self.Btn_Buzzer.text() == 'Зуммер':
             self.TCP.sendData(cmd.CMD_BUZZER + self.intervalChar + '1' + self.endChar)
-            self.Btn_Buzzer.setText('Noise')
+            self.Btn_Buzzer.setText('Шум')
         else:
             self.TCP.sendData(cmd.CMD_BUZZER + self.intervalChar + '0' + self.endChar)
-            self.Btn_Buzzer.setText('Buzzer')
-
+            self.Btn_Buzzer.setText('Зуммер')
+            
     def on_btn_Ultrasonic(self):
-        if self.Ultrasonic.text() == "Ultrasonic":
+        if self.Ultrasonic.text() == "Ультразвук":
             self.TCP.sendData(cmd.CMD_SONIC + self.intervalChar + '1' + self.endChar)
         else:
             self.TCP.sendData(cmd.CMD_SONIC + self.intervalChar + '0' + self.endChar)
-            self.Ultrasonic.setText("Ultrasonic")
+            self.Ultrasonic.setText("Ультразвук")
 
     def on_btn_Light(self):
-        if self.Light.text() == "Light":
+        if self.Light.text() == "Свет":
             self.TCP.sendData(cmd.CMD_LIGHT + self.intervalChar + '1' + self.endChar)
         else:
             self.TCP.sendData(cmd.CMD_LIGHT + self.intervalChar + '0' + self.endChar)
-            self.Light.setText("Light")
+            self.Light.setText("Свет")
 
     def Change_Left_Right(self):  # Left or Right
         self.servo1 = self.HSlider_Servo1.value()
@@ -858,10 +817,10 @@ class mywindow(QMainWindow, Ui_Client):
         return bValid
 
     def Tracking_Face(self):
-        if self.Btn_Tracking_Faces.text() == "Tracing-On":
-            self.Btn_Tracking_Faces.setText("Tracing-Off")
+        if self.Btn_Tracking_Faces.text() == "Слежение-Вкл":
+            self.Btn_Tracking_Faces.setText("Слежение-Выкл")
         else:
-            self.Btn_Tracking_Faces.setText("Tracing-On")
+            self.Btn_Tracking_Faces.setText("Слежение-Вкл")
     def find_Face(self,face_x,face_y):
         if face_x!=0 and face_y!=0:
             offset_x=float(face_x/400-0.5)*2
@@ -881,7 +840,7 @@ class mywindow(QMainWindow, Ui_Client):
         try:
             if self.is_valid_jpg('video.jpg'):
                 self.label_Video.setPixmap(QPixmap('video.jpg'))
-                if self.Btn_Tracking_Faces.text() == "Tracing-Off":
+                if self.Btn_Tracking_Faces.text() == "Слежение-Выкл":
                     self.find_Face(self.TCP.face_x, self.TCP.face_y)
         except Exception as e:
             print(e)

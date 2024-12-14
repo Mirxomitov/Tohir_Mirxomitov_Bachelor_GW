@@ -16,27 +16,27 @@
      <colorrole role="Button">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>72</red>
-        <green>72</green>
-        <blue>72</blue>
+        <red>0</red>
+        <green>0</green>
+        <blue>255</blue> <!-- Blue color -->
        </color>
       </brush>
      </colorrole>
      <colorrole role="Base">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>72</red>
-        <green>72</green>
-        <blue>72</blue>
+        <red>0</red>
+        <green>0</green>
+        <blue>255</blue> <!-- Blue color -->
        </color>
       </brush>
      </colorrole>
      <colorrole role="Window">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>72</red>
-        <green>72</green>
-        <blue>72</blue>
+        <red>0</red>
+        <green>0</green>
+        <blue>255</blue> <!-- Blue color -->
        </color>
       </brush>
      </colorrole>
@@ -45,27 +45,27 @@
      <colorrole role="Button">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>72</red>
-        <green>72</green>
-        <blue>72</blue>
+        <red>0</red>
+        <green>0</green>
+        <blue>255</blue> <!-- Blue color -->
        </color>
       </brush>
      </colorrole>
      <colorrole role="Base">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>72</red>
-        <green>72</green>
-        <blue>72</blue>
+        <red>0</red>
+        <green>0</green>
+        <blue>255</blue> <!-- Blue color -->
        </color>
       </brush>
      </colorrole>
      <colorrole role="Window">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>72</red>
-        <green>72</green>
-        <blue>72</blue>
+        <red>0</red>
+        <green>0</green>
+        <blue>255</blue> <!-- Blue color -->
        </color>
       </brush>
      </colorrole>
@@ -74,27 +74,27 @@
      <colorrole role="Button">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>72</red>
-        <green>72</green>
-        <blue>72</blue>
+        <red>0</red>
+        <green>0</green>
+        <blue>255</blue> <!-- Blue color -->
        </color>
       </brush>
      </colorrole>
      <colorrole role="Base">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>72</red>
-        <green>72</green>
-        <blue>72</blue>
+        <red>0</red>
+        <green>0</green>
+        <blue>255</blue> <!-- Blue color -->
        </color>
       </brush>
      </colorrole>
      <colorrole role="Window">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>72</red>
-        <green>72</green>
-        <blue>72</blue>
+        <red>0</red>
+        <green>0</green>
+        <blue>255</blue> <!-- Blue color -->
        </color>
       </brush>
      </colorrole>
@@ -104,7 +104,7 @@
   <property name="font">
    <font>
     <family>Malgun Gothic</family>
-    <pointsize>10</pointsize>
+    <pointsize>8</pointsize>
    </font>
   </property>
   <property name="windowTitle">
@@ -112,14 +112,14 @@
   </property>
   <property name="styleSheet">
    <string notr="true">QWidget{
-background:#484848;
+background:#0000FF; /* Blue background */
 }
 QAbstractButton{
 border-style:none;
 border-radius:0px;
 padding:5px;
 color:#DCDCDC;
-background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #484848,stop:1 #383838);
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #0000FF,stop:1 #0000CC); /* Blue gradient */
 }
 QAbstractButton:hover{
 color:#FFFFFF;
@@ -136,7 +136,7 @@ background-color:#444444;
 QLabel{
 color:#DCDCDC;
 border:1px solid #242424;
-background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #484848,stop:1 #383838);
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #0000FF,stop:1 #0000CC); /* Blue gradient */
 }
 QLabel:focus{
 border:1px solid #00BB9E;
@@ -147,21 +147,9 @@ border:1px solid #242424;
 border-radius:3px;
 padding:2px;
 background:none;
-selection-background-color:#484848;
+selection-background-color:#0000FF; /* Blue selection background */
 selection-color:#DCDCDC;
 }
-QLineEdit:focus,QLineEdit:hover{
-border:1px solid #242424;
-}
-QLineEdit{
-border:1px solid #242424;
-border-radius:3px;
-padding:2px;
-background:none;
-selection-background-color:#484848;
-selection-color:#DCDCDC;
-}
-
 QLineEdit:focus,QLineEdit:hover{
 border:1px solid #242424;
 }
@@ -178,7 +166,7 @@ background:#18181a;
 QSlider::sub-page:horizontal{
 height:8px;
 border-radius:3px;
-background:#008aff;
+background:#0000FF; /* Blue for slider sub-page */
 }
 
 
@@ -201,7 +189,7 @@ background:#18181a;
 QSlider::add-page:vertical{
 width:8px;
 border-radius:3px;
-background:#008aff;
+background:#0000FF; /* Blue for vertical slider sub-page */
 }
 
 
@@ -226,7 +214,7 @@ background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,sto
    <property name="font">
     <font>
      <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="styleSheet">
@@ -257,7 +245,7 @@ background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,sto
     <string notr="true"/>
    </property>
    <property name="text">
-    <string>Freenove</string>
+    <string></string>
    </property>
   </widget>
   <widget class="QPushButton" name="Btn_Turn_Left">
@@ -272,14 +260,14 @@ background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,sto
    <property name="font">
     <font>
      <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true"/>
    </property>
    <property name="text">
-    <string>Turn Left</string>
+    <string>Повернуть налево</string>
    </property>
   </widget>
   <widget class="QPushButton" name="Btn_BackWard">
@@ -294,14 +282,14 @@ background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,sto
    <property name="font">
     <font>
      <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true"/>
    </property>
    <property name="text">
-    <string>BackWard</string>
+    <string>Назад</string>
    </property>
   </widget>
   <widget class="QPushButton" name="Btn_Turn_Right">
@@ -316,14 +304,14 @@ background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,sto
    <property name="font">
     <font>
      <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true"/>
    </property>
    <property name="text">
-    <string>Turn Right</string>
+    <string>Повернуть направо </string>
    </property>
   </widget>
   <widget class="QPushButton" name="Btn_Video">
@@ -338,14 +326,14 @@ background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,sto
    <property name="font">
     <font>
      <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true"/>
    </property>
    <property name="text">
-    <string>Open Video</string>
+    <string>Открыть видео</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_Video">
@@ -360,7 +348,7 @@ background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,sto
    <property name="font">
     <font>
      <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="text">
@@ -379,14 +367,14 @@ background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,sto
    <property name="font">
     <font>
      <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true"/>
    </property>
    <property name="text">
-    <string>Down</string>
+    <string>Вниз</string>
    </property>
   </widget>
   <widget class="QPushButton" name="Btn_Left">
@@ -401,14 +389,14 @@ background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,sto
    <property name="font">
     <font>
      <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true"/>
    </property>
    <property name="text">
-    <string>Left</string>
+    <string>налево</string>
    </property>
   </widget>
   <widget class="QPushButton" name="Btn_Home">
@@ -423,14 +411,14 @@ background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,sto
    <property name="font">
     <font>
      <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true"/>
    </property>
    <property name="text">
-    <string>Home</string>
+    <string>Домой</string>
    </property>
   </widget>
   <widget class="QPushButton" name="Btn_Up">
@@ -445,14 +433,14 @@ background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,sto
    <property name="font">
     <font>
      <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true"/>
    </property>
    <property name="text">
-    <string>Up</string>
+    <string>Вверх</string>
    </property>
   </widget>
   <widget class="QPushButton" name="Btn_Right">
@@ -467,14 +455,14 @@ background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,sto
    <property name="font">
     <font>
      <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true"/>
    </property>
    <property name="text">
-    <string>Right</string>
+    <string>направо</string>
    </property>
   </widget>
   <widget class="QPushButton" name="Window_Close">
@@ -508,14 +496,14 @@ background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,sto
    <property name="font">
     <font>
      <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true"/>
    </property>
    <property name="text">
-    <string>IP Address</string>
+    <string> IP адрес</string>
    </property>
   </widget>
   <widget class="QPushButton" name="Btn_Connect">
@@ -530,11 +518,11 @@ background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,sto
    <property name="font">
     <font>
      <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="text">
-    <string>Connect</string>
+    <string>Подключиться</string>
    </property>
   </widget>
   <widget class="QCheckBox" name="checkBox_Led1">
@@ -549,11 +537,11 @@ background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,sto
    <property name="font">
     <font>
      <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="text">
-    <string>Led1</string>
+    <string>Лед1</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_Servo2">
@@ -587,11 +575,11 @@ background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,sto
    <property name="font">
     <font>
      <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="text">
-    <string>Led2</string>
+    <string>Лед2</string>
    </property>
   </widget>
   <widget class="QCheckBox" name="checkBox_Led3">
@@ -606,106 +594,11 @@ background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,sto
    <property name="font">
     <font>
      <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="text">
-    <string>Led3</string>
-   </property>
-  </widget>
-  <widget class="QCheckBox" name="checkBox_Led4">
-   <property name="geometry">
-    <rect>
-     <x>420</x>
-     <y>270</y>
-     <width>91</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Led4</string>
-   </property>
-  </widget>
-  <widget class="QCheckBox" name="checkBox_Led5">
-   <property name="geometry">
-    <rect>
-     <x>530</x>
-     <y>120</y>
-     <width>91</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Led5</string>
-   </property>
-  </widget>
-  <widget class="QCheckBox" name="checkBox_Led6">
-   <property name="geometry">
-    <rect>
-     <x>530</x>
-     <y>170</y>
-     <width>91</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Led6</string>
-   </property>
-  </widget>
-  <widget class="QCheckBox" name="checkBox_Led7">
-   <property name="geometry">
-    <rect>
-     <x>530</x>
-     <y>220</y>
-     <width>91</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Led7</string>
-   </property>
-  </widget>
-  <widget class="QCheckBox" name="checkBox_Led8">
-   <property name="geometry">
-    <rect>
-     <x>530</x>
-     <y>270</y>
-     <width>91</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Led8</string>
+    <string>Лед3</string>
    </property>
   </widget>
   <widget class="QSlider" name="HSlider_Servo1">
@@ -720,7 +613,7 @@ background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,sto
    <property name="font">
     <font>
      <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="styleSheet">
@@ -776,14 +669,14 @@ background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,sto
     <rect>
      <x>640</x>
      <y>170</y>
-     <width>91</width>
+     <width>120</width>
      <height>31</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="text">
@@ -795,14 +688,14 @@ background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,sto
     <rect>
      <x>640</x>
      <y>220</y>
-     <width>91</width>
+     <width>120</width>
      <height>31</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="text">
@@ -814,14 +707,14 @@ background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,sto
     <rect>
      <x>640</x>
      <y>270</y>
-     <width>91</width>
+     <width>120</width>
      <height>31</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="text">
@@ -833,77 +726,20 @@ background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,sto
     <rect>
      <x>640</x>
      <y>120</y>
-     <width>91</width>
+     <width>120</width>
      <height>31</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="text">
     <string>Led_Mode1</string>
    </property>
   </widget>
-  <!-- <widget class="QLineEdit" name="Color_R">
-   <property name="geometry">
-    <rect>
-     <x>560</x>
-     <y>90</y>
-     <width>30</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>255</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="Color_G">
-   <property name="geometry">
-    <rect>
-     <x>630</x>
-     <y>90</y>
-     <width>30</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>0</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="Color_B">
-   <property name="geometry">
-    <rect>
-     <x>700</x>
-     <y>90</y>
-     <width>30</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>0</string>
-   </property>
-  </widget> -->
   <widget class="QSlider" name="HSlider_FineServo2">
    <property name="geometry">
     <rect>
@@ -1011,7 +847,7 @@ background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,sto
    <property name="font">
     <font>
      <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="text">
@@ -1030,7 +866,7 @@ background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,sto
    <property name="font">
     <font>
      <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="text">
@@ -1049,7 +885,7 @@ background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,sto
    <property name="font">
     <font>
      <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="text">
@@ -1068,7 +904,7 @@ background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,sto
    <property name="font">
     <font>
      <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="text">
@@ -1091,7 +927,7 @@ background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,sto
     </font>
    </property>
    <property name="text">
-    <string>Servo 1</string>
+    <string>Серво 1</string>
    </property>
   </widget>
   <widget class="QLabel" name="Servo2">
@@ -1106,11 +942,11 @@ background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,sto
    <property name="font">
     <font>
      <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="text">
-    <string>Servo 2</string>
+    <string>Серво 2</string>
    </property>
   </widget>
   <widget class="QProgressBar" name="progress_Power">
@@ -1125,7 +961,7 @@ background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,sto
    <property name="font">
     <font>
      <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="styleSheet">
@@ -1162,11 +998,11 @@ color: rgb(152,251,152);
    <property name="font">
     <font>
      <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="text">
-    <string>Buzzer</string>
+    <string>Буззер</string>
    </property>
   </widget>
   <widget class="QPushButton" name="Ultrasonic">
@@ -1181,11 +1017,11 @@ color: rgb(152,251,152);
    <property name="font">
     <font>
      <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="text">
-    <string>Ultrasonic</string>
+    <string>Ультразвук</string>
    </property>
   </widget>
   <widget class="QPushButton" name="Light">
@@ -1200,99 +1036,11 @@ color: rgb(152,251,152);
    <property name="font">
     <font>
      <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="text">
-    <string>Light</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="Btn_DiaLeft">
-   <property name="geometry">
-    <rect>
-     <x>80</x>
-     <y>470</y>
-     <width>75</width>
-     <height>30</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true"/>
-   </property>
-   <property name="text">
-    <string>↖</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="Btn_DiaDRight">
-   <property name="geometry">
-    <rect>
-     <x>300</x>
-     <y>570</y>
-     <width>75</width>
-     <height>30</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true"/>
-   </property>
-   <property name="text">
-    <string>↘</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="Btn_DiaDLeft">
-   <property name="geometry">
-    <rect>
-     <x>80</x>
-     <y>570</y>
-     <width>75</width>
-     <height>30</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true"/>
-   </property>
-   <property name="text">
-    <string>↙</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="Btn_DiaRight">
-   <property name="geometry">
-    <rect>
-     <x>300</x>
-     <y>470</y>
-     <width>75</width>
-     <height>30</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true"/>
-   </property>
-   <property name="text">
-    <string>↗</string>
+    <string>Свет</string>
    </property>
   </widget>
   <widget class="QPushButton" name="Btn_Move_Left">
@@ -1307,96 +1055,16 @@ color: rgb(152,251,152);
    <property name="font">
     <font>
      <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true"/>
    </property>
    <property name="text">
-    <string>Move Left</string>
+    <string>Переместить влево</string> 
    </property>
   </widget>
-  <!-- <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>610</y>
-     <width>425</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout">
-    <item>
-     <widget class="QPushButton" name="Btn_wheel">
-      <property name="font">
-       <font>
-        <family>Malgun Gothic</family>
-        <pointsize>9</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true"/>
-      </property>
-      <property name="text">
-       <string>Mecanum_wheels</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QRadioButton" name="Btn_Mode1">
-      <property name="font">
-       <font>
-        <family>Malgun Gothic</family>
-        <pointsize>10</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>M-Free</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QRadioButton" name="Btn_Mode4">
-      <property name="font">
-       <font>
-        <family>Malgun Gothic</family>
-        <pointsize>10</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>M-Line</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QRadioButton" name="Btn_Mode2">
-      <property name="font">
-       <font>
-        <family>Malgun Gothic</family>
-        <pointsize>10</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>M-Light</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QRadioButton" name="Btn_Mode3">
-      <property name="font">
-       <font>
-        <family>Malgun Gothic</family>
-        <pointsize>10</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>M-Sonic</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget> -->
   <widget class="QPushButton" name="Btn_Tracking_Faces">
    <property name="geometry">
     <rect>
@@ -1409,14 +1077,14 @@ color: rgb(152,251,152);
    <property name="font">
     <font>
      <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true"/>
    </property>
    <property name="text">
-    <string>Tracing-On</string>
+    <string>Следование-Вкл</string>
    </property>
   </widget>
   <widget class="QPushButton" name="Btn_Rotate">
@@ -1431,14 +1099,14 @@ color: rgb(152,251,152);
    <property name="font">
     <font>
      <family>Malgun Gothic</family>
-     <pointsize>10</pointsize>
+     <pointsize>8</pointsize>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true"/>
    </property>
    <property name="text">
-    <string>Rotate-On</string>
+    <string>Вращение Вкл</string>
    </property>
   </widget>
   <widget class="QPushButton" name="Btn_Move_Right">
