@@ -1,13 +1,14 @@
 # -*- mode: python ; coding: utf-8 -*-
 
 added_files = [
-    ("image", "image"),
+    ("image", "image"),  # Includes the entire 'image' folder
     ("image/logo_Mini.png", "image/logo_Mini.png"),
-    ("Raspberry_4WD_Car.png", "image/Raspberry_4WD_Car.png"),
+    ("image/Raspberry_4WD_Car.png", "image/Raspberry_4WD_Car.png"),
     ("image/Raspberry_4WD_M_Car.png", "image/Raspberry_4WD_M_Car.png"),
     ("IP.txt", "IP.txt"),
     ("haarcascade_frontalface_default.xml", "haarcascade_frontalface_default.xml")
 ]
+
 
 a = Analysis(
     ['main.py'],
